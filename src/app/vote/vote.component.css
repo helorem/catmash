@@ -1,0 +1,54 @@
+#content {
+  height : 100%;
+  width : 100%;
+  min-height : 700px;
+  background-image : url("src/assets/bg.png");
+  background-repeat : no-repeat;
+  background-size: 100% 100%;
+}
+
+#panel_up {
+  height : calc(50% - 5px);
+}
+
+#panel_down {
+  height : 50%;
+  margin-top : 10px;
+}
+
+.img_container {
+  height : 300px;
+}
+
+#img_up {
+  float : right;
+  margin-right : 75px;
+  margin-top : 5%;
+}
+
+#img_down {
+  float : left;
+  margin-left : 75px;
+  margin-top : 9%;
+}
+
+.ui.medium.circular.image {
+  height : 100%;
+}
+.clickable.image:hover {
+  cursor : pointer;
+  transition: transform .2s;
+}
+
+.clickable.image:hover {
+  transform: scale(1.20);
+}
+
+.overlay {
+  position : absolute;
+  top : 0;
+}
+
+.overlay_container {
+  position : relative;
+}

@@ -1,0 +1,6 @@
+--2019-03-12 22:39:42--  https://flyingmeat.com/acorn/docs-5.0/generators,_gradients,_
+Resolving flyingmeat.com (flyingmeat.com)... 198.58.106.246, 2600:3c00::f03c:91ff:fe13:da62
+Connecting to flyingmeat.com (flyingmeat.com)|198.58.106.246|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2019-03-12 22:39:43 ERROR 404: Not Found.
+

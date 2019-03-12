@@ -1,0 +1,14 @@
+DROP TABLE cat;
+CREATE TABLE cat (
+	id INTEGER PRIMARY KEY,
+	json_id TEXT,
+	image TEXT
+);
+
+DROP TABLE match;
+CREATE TABLE match (
+	id INTEGER PRIMARY KEY,
+	winner REFERENCES cat(id) ON DELETE CASCADE,
+	looser REFERENCES cat(id) ON DELETE CASCADE
+);
+

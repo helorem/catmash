@@ -1,0 +1,18 @@
+<div id="content">
+  <div id="panel_up">
+    <div id="img_up" class="img_container overlay_container" [suiTransition]="items[0]['transition']">
+      <img class="clickable ui medium circular image" [src]="items[0]['src']" (click)="this.setWinner(0)" *ngIf="items[0]['src']">
+      <img class="overlay ui medium circular image" src="assets/blood.png" *ngIf="items[0]['status'] == 'loose'">
+      <img class="overlay ui medium circular image" src="assets/halo.png" *ngIf="items[0]['status'] == 'win'">
+      <img class="overlay ui medium circular image" src="assets/pokeball.png" *ngIf="items[0]['status'] == 'loading'">
+    </div>
+  </div>
+  <div id="panel_down">
+    <div id="img_down" class="img_container overlay_container" [suiTransition]="items[1]['transition']" >
+      <img class="clickable ui medium circular image" [src]="items[1]['src']" (click)="this.setWinner(1)" *ngIf="items[1]['src']">
+      <img class="overlay ui medium circular image" src="assets/blood.png" *ngIf="items[1]['status'] == 'loose'">
+      <img class="overlay ui medium circular image" src="assets/halo.png" *ngIf="items[1]['status'] == 'win'">
+      <img class="overlay ui medium circular image" src="assets/pokeball.png" *ngIf="items[1]['status'] == 'loading'">
+    </div>
+  </div>
+</div>
