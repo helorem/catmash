@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TransitionController, Transition, TransitionDirection } from "ng2-semantic-ui";
 import { VoteService } from '../_services/vote.service';
+
 @Component({
   selector: 'app-vote',
   templateUrl: './vote.component.html',

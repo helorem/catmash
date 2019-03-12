@@ -35,6 +35,7 @@
 .ui.medium.circular.image {
   height : 100%;
 }
+
 .clickable.image:hover {
   cursor : pointer;
   transition: transform .2s;
@@ -51,4 +52,10 @@
 
 .overlay_container {
   position : relative;
+}
+
+#results_button {
+  height : 100px;
+  cursor : pointer;
+
 }

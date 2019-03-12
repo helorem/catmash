@@ -15,4 +15,8 @@ export class VoteService {
   resolveMatch(winner_id : number, looser_id : number) {
     return this.http.post("/api/match", { winner : winner_id, looser : looser_id});
   }
+
+  getResults() {
+    return this.http.get<any[]>("/api/results");
+  }
 }

@@ -1,5 +1,6 @@
 <div id="content">
   <div id="panel_up">
+    <img src="assets/results_button.png" id="results_button" routerLink="/results"/>
     <div id="img_up" class="img_container overlay_container" [suiTransition]="items[0]['transition']">
       <img class="clickable ui medium circular image" [src]="items[0]['src']" (click)="this.setWinner(0)" *ngIf="items[0]['src']">
       <img class="overlay ui medium circular image" src="assets/blood.png" *ngIf="items[0]['status'] == 'loose'">

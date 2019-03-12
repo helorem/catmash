@@ -1,0 +1,12 @@
+<button class="ui button" routerLink="/vote">
+  Back to vote
+</button>
+<table class="ui collapsing table">
+  <tbody>
+    <tr *ngFor="let item of this.items">
+      <td><img src="{{ item.image }}" class="ui small circular image"></td>
+      <td><i class="big thumbs up outline icon"></i> {{ item.count_winner }}</td>
+      <td><i class="big thumbs down outline icon"></i> {{ item.count_looser }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -45,6 +45,39 @@ app.post('/api/match', function(req, res) {
       return;
     }
 
-	res.json({});
+    res.json({});
   });
 });
+
+app.get('/api/results', function(req, res) {
+  db.all(`
+    SELECT
+      id,
+      image,
+      (SELECT COUNT(id) FROM match WHERE winner = cat.id) as count_winner,
+      (SELECT COUNT(id) FROM match WHERE looser = cat.id) as count_looser
+    FROM cat
+    ORDER BY count_winner - count_looser DESC
+    `, (err, rows) => {
+    if (err) {
+      res.status(500);
+      res.json({
+        error : "Cannot get results : " + err
+      });
+      return;
+    }
+
+    let results = [];
+    for (let row of rows) {
+      results.push({
+        id : row.id,
+        image : row.image,
+        count_winner : row.count_winner,
+        count_looser : row.count_looser
+      });
+    }
+
+    res.json(results);
+  });
+});
+
